@@ -1,0 +1,304 @@
+:root{
+    /* main font */
+    --font: "DM Sans", sans-serif;
+
+    /* coolors */
+    --rojo__principal: #ff0000;
+    --rojo__oscuro: #cc0000;
+    --azul: #3b4cca;
+    --amarillo: #ffde00;
+    --amarillo__oscuro: #b3a125;
+    --negro: #000;
+    --blanco: #fff;
+    --gris: #c8c8c8;
+
+    --sombra: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;;
+}
+
+/* inicio de globales */
+
+img{
+    width: 100%;
+    object-fit: cover;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem == 10px */
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: var(--font);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+.contenedor{
+    max-width: 130rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a, p, h1, h2, h3{
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--blanco);
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.link {
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  padding: 1em 1.5em;
+  color: #ffedd3;
+  text-transform: uppercase;
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffc506;
+  transition: 0.5s ease;
+}
+
+
+.link:hover::before {
+  width: 100%;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background-color: #ffc506;
+  transition: 0.4s ease;
+  z-index: -1;
+}
+
+.link:hover::after {
+  height: 100%;
+  transition-delay: 0.4s;
+  color: aliceblue;
+}
+
+
+.no-margin{
+    margin: 0px;
+}
+
+.no-padding{
+    padding: 0px;
+}
+
+.centrar-texto{
+    text-align: center;
+}
+
+/* fin de globales */
+
+/* inicio header */
+
+.header{
+    display: flex;
+    background-color: var(--rojo__principal);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+}
+
+.header__logotipo{
+    max-width: 10%;
+}
+
+.header__links{
+    display: flex;
+    gap: 10rem;
+}
+
+
+/* entradas de blog */
+
+@media (min-width: 1175px){
+    .entradas__blog{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+}
+
+.titulo{
+    font-size: 6rem;
+    margin: 0.5rem;
+}
+
+.entrada{
+    margin-bottom: 3rem;
+}
+
+.separador{
+    border: 1px solid var(--gris);
+    margin: 4rem auto 2rem auto;
+    width: 90%;
+}
+
+.entrada:last-of-type{
+    border-bottom: unset;
+}
+
+.entrada__titulo--munchlax{
+    background-color: var(--azul);
+    color: var(--blanco);
+    padding: 0.6rem 0;
+}
+
+.entrada__titulo--eevee{
+    background-color: var(--amarillo__oscuro);
+    color: var(--blanco);
+    padding: 0.6rem 0;
+}
+
+.entrada__titulo--umbreon{
+    background-color: var(--negro);
+    color: var(--amarillo);
+    padding: 0.6rem 0;
+}
+
+.entrada__imagen{
+    height: 40rem;
+}
+
+.entrada__imagen img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.entrada__informacion{
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 2rem 0 3rem 0;
+}
+
+.entrada__link{
+    background-color: var(--azul);
+    padding: 1.3rem 4rem;
+}
+
+
+/* barra lateral */
+
+.barra__lateral{
+    padding: 0 2rem;
+    background-color: var(--amarillo);
+}
+
+.lateral__informacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.entrada__lateral{
+    display: grid;
+    grid-template-columns: unset;
+}
+
+.lateral__imagen{
+    width: 10rem;
+}
+
+.entradas__laterales{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+}
+
+@media (min-width: 1436px){
+    .entrada__lateral{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 0.8rem;
+            margin-bottom: 1.4rem;
+        }
+        .lateral__imagen{
+        width: 100%;
+        height: 100%;
+    }
+
+    .entradas__laterales{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.lateral__titulo{
+    line-height: 1;
+    padding: 2rem 0;
+    margin-bottom: unset;
+}
+
+@media (min-width: 1174px){
+    .lateral__titulo{
+        padding: unset;
+        margin: 2rem 0 2rem 0;
+    }
+}
+
+.line-height{
+    line-height: 1;
+}
+
+.subtitulo{
+    font-size: 1.4rem;
+}
+
+.informacion{
+    font-size: 1.2rem;
+}
+
+@media (min-width: 1300px){
+    .lateral__link{
+        margin: unset;
+    }
+
+    .lateral__imagen img{
+        min-width: 100%;
+    }
+}
+
+.lateral__link{
+    font-size: 1rem;
+    background-color: var(--rojo__oscuro);
+    padding: 1rem 0.5rem;
+    margin: .6rem 0 2rem 0;
+}
+
+.lateral__link:hover{
+    background-color: var(--rojo__principal);
+}
+
