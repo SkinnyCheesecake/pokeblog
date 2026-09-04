@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeBlog</title>
+</head>
+
+<!-- enlace para preconectar la pagina de blog -->
+<link rel="prefetch" href="./blog.html" as="document">
+
+<!-- enlaces a las fuentes y a las hojas de css van aqui (abajo) -->
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" as="crossorigin">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+<link rel="preload" href="./assets/css/normalize.css" as="stylesheet">
+<link rel="stylesheet" href="./assets/css/normalize.css"> <!-- link to normalize -->
+
+<link rel="preload" href="./assets/css/app.css" as="stylesheet">
+<link rel="stylesheet" href="./assets/css/app.css"> <!-- link to app.css -->
+
+
+<body>
+<!-- header -->
+    <header>
+
+        <div class="header">
+                <div class="header__logotipo"> <a href="index.html"><img class="logotipo" loading="lazyloading" src="./assets/imgs/Pokemon--logo.png" alt="Logo__pokemon"></a> </div>
+        <div class="header__links">
+            <a href="sobre.html" class="link">Sobre nosotros</a>
+            <a href="blog.html" class="link">Blog</a>
+            <a href="contacto.html" class="link">Contactanos</a>
+        </div>
+        </div>
+
+    </header>
+<!-- end of header -->
+
+<!-- footer -->
+<footer class="footer">
+        <div class="footer__logotipo"> <a href="index.html"><img class="logotipo2" loading="lazyloading" src="./assets/imgs/Pokemon--logo.png" alt="Logo__pokemon"></a><p>This is a funny silly little side-project</p></div>
+</footer>
+<!-- end of footer -->
